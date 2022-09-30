@@ -1,0 +1,109 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}
+Home Page
+{% endblock title %}
+
+{% block css_files %}
+<link rel="stylesheet" href="{% static 'post/home.css' %}">
+{% endblock css_files %}
+
+
+{% block body %}
+<div class="row">
+    <div class="col-3 mt-5 mb-5 ">
+        <div class="card" style="width: 25rem;">
+            
+            <ul class="list-group list-group-flush">
+                <a href="{% url 'create-community' %}" class="a_unset">
+                    <li class="list-group-item">Create Community</li>
+                </a>
+              <a href="{% url 'create-post' %}" class="a_unset">
+                <li class="list-group-item">Create Post</li>
+              </a>
+              {% for tag in tags %}
+              <a href="{% url 'tag-filter' tag.id %}" class="a_unset">
+                <li class="list-group-item">{{tag.caption}}</li>
+              </a>
+              {% endfor %}
+            </ul>
+          </div>
+    </div>
+    <div class="col">
+        {% for post in posts %}        
+            <div class="container mt-5 mb-5">
+                <div class="row d-flex align-items-center justify-content-center">
+                    <div class="col-md-6">
+                        <div class="card">
+                            <div class="d-flex justify-content-between p-2 px-3">
+                                <div class="d-flex flex-row align-items-center"> 
+                                    <img src="
+                                        {% if post.author.image %}
+                                            {{post.author.image.url}}
+                                        {% else %}
+                                            {{"https://st3.depositphotos.com/15648834/17930/v/600/depositphotos_179308454-stock-illustration-unknown-person-silhouette-glasses-profile.jpg"}}
+                                        {% endif %}
+                                    " width="50" class="rounded-circle mx-2 my-2">
+                                    <div class="d-flex flex-column ml-2"> <span class="font-weight-bold">{{post.author.full_name}}</span></div>
+                                </div>
+                                <div class="d-flex flex-row mt-1 ellipsis mx-2 my-2"> <small class="mr-2">{{post.date}}</small></div>
+                            </div> 
+
+                            <div class="p-4">
+                                <p class="text-justify">{{post.content}}</p>
+                            </div>
+                            
+                            <img src="{{post.image.url}}" class="img-fluid m-2">
+
+                            <div class="p-2">
+                                
+                                <hr>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="d-flex flex-row mx-2"> <span>{{post.community.community_name}} Community</span>  </div>
+                                    <div class="d-flex flex-row muted-color mx-2"> <span></span>  </div>
+                                    
+                                    <span class="mx-2">{{post.total_comments}} comments</span>
+                                </div>
+                                <hr>
+                                <div class="comments my-2 ">
+                                    {% for comment in post.comments  %}
+                                        <div class="d-flex flex-row mb-4"> 
+                                            <img src="
+                                            {% if comment.user.image %}
+                                                {{ comment.user.image.url}}
+                                            {% else %}
+                                                {{"https://st3.depositphotos.com/15648834/17930/v/600/depositphotos_179308454-stock-illustration-unknown-person-silhouette-glasses-profile.jpg"}}
+                                            {% endif %}
+                                            " width="40" class="rounded-image mx-2">
+                                            <div class="d-flex flex-column"> 
+                                                <span class="name">{{comment.user.full_name}}</span> 
+                                                <small class="comment-text">{{comment.text}}</small>
+                                            </div>
+                                        </div>    
+                                    {% endfor %}
+                                    
+                                    <div class="comment-input justify-content-center"> 
+                                        <form action="{% url 'add-comment' %}" method="POST">
+                                            {% csrf_token %}
+                                            <input type="hidden" name="post_id" value="{{post.id}}">
+                                            <input type="text" name="text" class="form-control" placeholder="Type your comment">
+                                            <div class="justify-content-center fonts"> 
+                                                <button type="submit" class="btn-none">Send</button> 
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            {% endfor %}
+
+    </div>
+</div>{% endblock body %}
+
+
+

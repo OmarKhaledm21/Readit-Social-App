@@ -1,0 +1,99 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+Profile
+{% endblock title %}
+
+{% block css_files %}
+<link rel="stylesheet" href=" {% static 'user/profile.css' %}">
+{% endblock css_files %}
+
+
+{% block body %}
+<div class="row">
+    <div class="container rounded bg-white mt-3 mb-5">
+        <div class="row">
+            <div class="col-md-3 border-right">
+                
+                <div class="d-flex flex-column align-items-center text-center p-3 py-5"><img class="rounded-circle mt-5"
+                        width="150px"
+                        src="
+                        {% if user.image %}
+                            {{user.image.url}}
+                        {% else %}
+                            {{"https://st3.depositphotos.com/15648834/17930/v/600/depositphotos_179308454-stock-illustration-unknown-person-silhouette-glasses-profile.jpg"}}
+                        {% endif %}
+                        ">
+                        <span
+                        class="font-weight-bold">{{user_fullname}}</span><span
+                        class="text-black-50">@{{user.username}}</span><span> </span></div>
+            </div>
+            <div class="col-md-5 border-right">
+                <div class="p-3 py-5">
+                    <div class="d-flex justify-content-between align-items-center mb-3">
+                        <h4 class="text-right">Profile Settings</h4>
+                    </div>
+                        {% if error %}
+                            {% for er in form_errors  %}
+                            
+                                <div class="alert alert-danger my-3 text-center" role="alert">
+                                    {{er}}
+                                </div>
+                        
+                            {% endfor %}
+                         {% endif %}
+                    
+                    <form action="{% url 'user-profile' user.id %}" method="POST" enctype="multipart/form-data">
+                    {% csrf_token %}
+                        <div class="row mt-2">
+                            <div class="col-md-6"><label class="labels">First Name</label><input type="text"
+                                    class="form-control" placeholder="first_name" name="first_name"
+                                    value="{{user.first_name}}"></div>
+                            <div class="col-md-6"><label class="labels">Last Name</label><input type="text"
+                                    class="form-control" name="last_name" value="{{user.last_name}}"
+                                    placeholder="last_name"></div>
+                        </div>
+                        <div class="row mt-3">
+                            
+                    
+
+                            <div class="col-md-12"><label class="labels">Mobile Number</label><input type="text"
+                                    class="form-control" placeholder="enter phone number" name="phone"
+                                    value="{{user.phone}}"></div>
+
+                            <div class="col-md-12"><label class="labels">Email</label><input type="text"
+                                    class="form-control" placeholder="enter email id" name="email" value="{{user.email}}">
+                            </div>
+
+                            <div class="col-md-12"><label class="labels">Gender</label><input type="text"
+                                    class="form-control" placeholder="gender" name="gender" value="{{user.gender}}"></div>
+
+                            <div class="col-md-12"><label class="labels">New Password</label><input type="password"
+                                    class="form-control" placeholder="new password" name="password" value=""></div>
+                            <div class="col-md-12"><label class="labels">Retype New Password</label><input type="password"
+                                    class="form-control" placeholder="new password" name="retype_password" value=""></div>
+                            
+                                    <div class="mb-3">
+                                        <label for="formFile" class="form-label">Image</label>
+                                        <input class="form-control"  type="file" name="image" accept="image/*" id="id_image">
+                                      </div>
+                                   
+                        </div>
+
+                        <div class="mt-5 text-center">
+                            <button class="btn btn-primary profile-button" type="submit">Save Profile</button>
+                        </div>
+
+                    </form>
+                    
+                     
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</div>
+</div>
+</div>
+{% endblock body %}

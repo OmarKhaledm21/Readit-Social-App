@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Create Post
+{% endblock title %}
+
+{% block body %}
+
+<div class="row mx-2 my-4">
+    <form action="{% url 'create-post' %}" method="POST" enctype="multipart/form-data" accept-charset="utf-8">
+        {% csrf_token %}
+        <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Title</label>
+            <input type="text" class="form-control" name="title" id="exampleFormControlInput1" placeholder="">
+          </div>
+          <div class="mb-3">
+            <label for="exampleFormControlTextarea1" class="form-label">Content</label>
+            <textarea class="form-control" name="content" id="exampleFormControlTextarea1" rows="3"></textarea>
+          </div>
+          <select class="form-select my-2" aria-label="Default select example" name="community_id">
+            <option selected>Select a community</option>
+                {% for community in communities %}
+                
+                    <option value="{{community.id}}">{{community.community_name}}</option>
+                    
+                {% endfor %}
+          </select>
+
+          <label>Select Tags:</label>
+          <select name="tag_id" id="tag_id" multiple="multiple" class="multiselect" >
+            {% for tag in tags %}
+              <option value="{{tag.id}}">{{tag.caption}}</option>
+            {% endfor %}
+          </select>
+          <br><br>
+          
+          <div class="mb-3">
+            <label for="formFile" class="form-label">Image</label>
+            <input class="form-control"  type="file" name="image" accept="image/*" id="id_image">
+          </div>
+          <button class="btn btn-block submit_btn form-control" type="submit">Submit</button>
+    </form>
+</div>
+{% endblock body %}
+
+

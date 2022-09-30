@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+    {{page_name}} Page
+{% endblock title %}
+
+
+
+{% block css_files %}
+    <link rel="stylesheet" href="{% static 'user/forms.css' %}">
+{% endblock css_files %}
+
+{% block body %}
+
+<div class="row justify-content-center">
+    <div class="col-5 align-self-center  justify-content-center text-center">
+        <form action="{% url form_url %}" method="POST">
+            {% csrf_token %}
+            {% if error %}
+                {% for er in form_errors  %}
+                <div class="alert alert-danger my-3 text-center" role="alert">
+                    {{er}}
+                  </div>
+                    
+                {% endfor %}
+            {% endif %}
+            {% for field in form %}
+                {{field.errors}}
+                {{field.label_tag}}    
+                {{field}}
+            {% endfor %}
+            <button class="btn btn-block submit_btn form-control">Submit</button>
+        </form>
+    </div>
+</div>
+
+{% endblock body %}
+
+
+
+

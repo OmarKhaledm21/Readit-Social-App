@@ -1,0 +1,16 @@
+.main_margins {
+    margin: 20px;
+    background-color: tomato;
+}
+
+.btn-none {
+    all: unset;
+}
+
+.btn-none:hover {
+    color: black;
+}
+
+.a_unset {
+    text-decoration: none;
+}
