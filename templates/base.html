@@ -37,17 +37,17 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <!-- Navbar brand -->
                 <a class="navbar-brand mt-2 mt-lg-0" href="#">
-                    <img src="https://mdbcdn.b-cdn.net/img/logo/mdb-transaprent-noshadows.webp" height="15"
-                        alt="MDB Logo" loading="lazy" />
+                    <img src="{% static 'post/logo.png' %}" height="30px" width="110px"
+                        alt="" loading="lazy" />
                 </a>
                 <!-- Left links -->
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     {% if logged_in %}
                         <li class="nav-item">
-                            <a class="nav-link main_text" href="{% url 'home' %}">Home</a>
+                            <a class="nav-link main_text nav_btn" href="{% url 'home' %}">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link main_text" href="{% url 'join-community' %}">Join a community</a>
+                            <a class="nav-link main_text nav_btn" href="{% url 'join-community' %}">Join a community</a>
                         </li>
 
                     {% endif %}
@@ -63,21 +63,21 @@
                     {% if logged_in %}
                     
                     <li class="nav-item">
-                        <a class="nav-link main_text" href="{% url 'remove-community' %}">My communities</a>
+                        <a class="nav-link main_text nav_btn" href="{% url 'remove-community' %}">My communities</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link main_text" href="{% url 'user-profile' user.id %}">My Profile</a>
+                        <a class="nav-link main_text nav_btn" href="{% url 'user-profile' user.id %}">My Profile</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link main_text mx-2" href="{% url 'signout' %}">Signout</a>
+                        <a class="nav-link main_text mx-2 nav_btn" href="{% url 'signout' %}">Signout</a>
                     </li>
                     
                     {% else %}
                     <li class="nav-item">
-                        <a class="nav-link main_text" href="{% url 'signin' %}">Signin</a>
+                        <a class="nav-link main_text nav_btn" href="{% url 'signin' %}">Signin</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link main_text mx-2" href="{% url 'signup' %}">Signup</a>
+                        <a class="nav-link main_text mx-2 nav_btn" href="{% url 'signup' %}">Signup</a>
                     </li>
                     
                     {% endif %}
@@ -115,7 +115,7 @@
     <!-- Footer -->
     <footer class="text-center text-lg-start text-muted main_color">
         <!-- Section: Social media -->
-        <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom sec_color">
+        <section class="d-flex justify-content-center  p-4 border-bottom sec_color">
             <!-- Left -->
             <div class="me-5 d-none d-lg-block main_text">
                 <span>Get connected with us on social networks:</span>
@@ -124,23 +124,12 @@
 
             <!-- Right -->
             <div class="main_text">
-                <a href="" class="me-4 text-reset">
-                    <i class="fab fa-facebook-f"></i>
+                
+                <a href="https://www.linkedin.com/in/omarkhaledm21/" class="me-4 text-reset">
+                    <i class="fa fa-linkedin"></i>
                 </a>
-                <a href="" class="me-4 text-reset">
-                    <i class="fab fa-twitter"></i>
-                </a>
-                <a href="" class="me-4 text-reset">
-                    <i class="fab fa-google"></i>
-                </a>
-                <a href="" class="me-4 text-reset">
-                    <i class="fab fa-instagram"></i>
-                </a>
-                <a href="" class="me-4 text-reset">
-                    <i class="fab fa-linkedin"></i>
-                </a>
-                <a href="" class="me-4 text-reset">
-                    <i class="fab fa-github"></i>
+                <a href="https://github.com/OmarKhaledm21" class="me-4 text-reset">
+                    <i class="fa fa-github"></i>
                 </a>
             </div>
             <!-- Right -->
@@ -156,11 +145,13 @@
                     <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
                         <!-- Content -->
                         <h6 class="text-uppercase fw-bold mb-4">
-                            <i class="fas fa-gem me-3"></i>Company name
+                            Project Idea
                         </h6>
                         <p>
-                            Here you can use rows and columns to organize your footer content. Lorem ipsum
-                            dolor sit amet, consectetur adipisicing elit.
+                            This project is a simple social application where users are able to join some
+                            community consisting of people with same interests, users can share posts in this community and only users 
+                            that are members of this community can view posts.<br>
+                            User can be part of many community and see posts from all communities on his home page.
                         </p>
                     </div>
                     <!-- Grid column -->
@@ -169,55 +160,42 @@
                     <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
                         <!-- Links -->
                         <h6 class="text-uppercase fw-bold mb-4">
-                            Products
+                            Projects
                         </h6>
                         <p>
-                            <a href="#!" class="text-reset">Angular</a>
+                            <a href="https://github.com/OmarKhaledm21/E-Commerce-Website-Fullstack-project" class="text-reset">
+                                E-Commerce Fullstack Online Store
+                            </a>
                         </p>
                         <p>
-                            <a href="#!" class="text-reset">React</a>
+                            <a href="https://github.com/OmarKhaledm21/EarthQuakeReport_AndroidNative-API-JSON" class="text-reset">
+                                Earth Quake Report Android Application</a>
                         </p>
                         <p>
-                            <a href="#!" class="text-reset">Vue</a>
+                            <a href="https://github.com/OmarKhaledm21/Disk-Scheduling-Algorithms" class="text-reset">Disk Scheduling Algorithms + Visualizer</a>
                         </p>
                         <p>
-                            <a href="#!" class="text-reset">Laravel</a>
+                            <a href="https://github.com/OmarKhaledm21/Blog-Project-Python-Django-" class="text-reset">Personal Blog</a>
                         </p>
                     </div>
                     <!-- Grid column -->
 
-                    <!-- Grid column -->
-                    <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
-                        <!-- Links -->
-                        <h6 class="text-uppercase fw-bold mb-4">
-                            Useful links
-                        </h6>
-                        <p>
-                            <a href="#!" class="text-reset">Pricing</a>
-                        </p>
-                        <p>
-                            <a href="#!" class="text-reset">Settings</a>
-                        </p>
-                        <p>
-                            <a href="#!" class="text-reset">Orders</a>
-                        </p>
-                        <p>
-                            <a href="#!" class="text-reset">Help</a>
-                        </p>
-                    </div>
-                    <!-- Grid column -->
+                    
 
                     <!-- Grid column -->
                     <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
                         <!-- Links -->
                         <h6 class="text-uppercase fw-bold mb-4">Contact</h6>
-                        <p><i class="fas fa-home me-3"></i> New York, NY 10012, US</p>
+                        <p><i class="fa fa-home me-3"></i> Cairo, Egypt</p>
                         <p>
-                            <i class="fas fa-envelope me-3"></i>
-                            info@example.com
+                            <i class="fa fa-envelope me-3"></i>
+                            omarkhaledm21@gmail.com
                         </p>
-                        <p><i class="fas fa-phone me-3"></i> + 01 234 567 88</p>
-                        <p><i class="fas fa-print me-3"></i> + 01 234 567 89</p>
+                        <p><i class="fa fa-phone me-3"></i> + 02 101 366 5215</p>
+                        <a href="https://drive.google.com/file/d/1_8ALxjB290GBuU9Pj2X9sRTyiaBVRonG/view?usp=sharing" style="text-decoration:none;">
+                            <p><i class="fa fa-print me-3"></i> Check CV</p>
+                    
+                        </a>
                     </div>
                     <!-- Grid column -->
                 </div>
@@ -228,8 +206,8 @@
 
         <!-- Copyright -->
         <div class="text-center p-4 main_text" style="background-color: rgba(0, 0, 0, 0.05);">
-            © 2021 Copyright:
-            <a class="text-reset fw-bold" href="https://mdbootstrap.com/">MDBootstrap.com</a>
+            Check source code for this project here
+            <a class="text-reset fw-bold" href="https://github.com/OmarKhaledm21/Readit-Social-App">Readit Social App Github Repo</a>
         </div>
         <!-- Copyright -->
     </footer>
