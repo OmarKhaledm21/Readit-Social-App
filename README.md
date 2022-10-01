@@ -18,15 +18,15 @@ User Model showing password hashed in Django Admin Panel
 <img src="https://github.com/OmarKhaledm21/Readit-Social-App/blob/main/SS/user_admin.png" alt="drawing" width="900" height="500"/><br>
 <img src="https://github.com/OmarKhaledm21/Readit-Social-App/blob/main/SS/profile2.png" alt="drawing" width="900" height="500"/>
 
-##### - Signup Page
-- This page includes all products that are sold on the website.
-- products are fetched from the backend products model through api.
-<img src="https://github.com/OmarKhaledm21/Readit-Social-App/blob/main/SS/signup.png" alt="drawing" width="800" height="500"/>
+##### - Site Communities
+- This page includes all communities on the website, each community has a name, description and an image.
+- Usefull data is fetched from database like community total member count.
+- User is able to join any community by clicking on Join Community button.
+<img src="https://github.com/OmarKhaledm21/Readit-Social-App/blob/main/SS/communities.png" alt="drawing" width="800" height="500"/>
 
-##### - Signup Page
-- This page includes all products that are sold on the website.
-- products are fetched from the backend products model through api.
-<img src="https://github.com/OmarKhaledm21/Readit-Social-App/blob/main/SS/signup.png" alt="drawing" width="800" height="500"/>
+##### - Users joined Communities
+- AAAAAAAAAAAAAAAAAAAAAA
+<img src="https://github.com/OmarKhaledm21/Readit-Social-App/blob/main/SS/user_communities.png" alt="drawing" width="800" height="500"/>
 
 ##### - Signup Page
 - This page includes all products that are sold on the website.
