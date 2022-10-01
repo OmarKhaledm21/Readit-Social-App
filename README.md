@@ -43,13 +43,15 @@ User Model showing password hashed in Django Admin Panel
 <br>
 <img src="https://github.com/OmarKhaledm21/Readit-Social-App/blob/main/SS/create_post.png" alt="drawing" width="900" height="500"/><br>
 
+
 ##### - Posts Comments section
 - Each post has comments section with comments fetched from database comments table where each comments is assigned a foreign key to post id on posts table.
 <br>
 <img src="https://github.com/OmarKhaledm21/Readit-Social-App/blob/main/SS/post_comments.png" alt="drawing" width="900" height="500"/><br>
 <br>
+
 ##### - Footer
 <br>
-<img src="https://github.com/OmarKhaledm21/Readit-Social-App/blob/main/SS/footer.png" alt="drawing" width="900" height="500"/>
+<img src="https://github.com/OmarKhaledm21/Readit-Social-App/blob/main/SS/footer.png" alt="drawing" width="1000" height="500"/>
 
 
