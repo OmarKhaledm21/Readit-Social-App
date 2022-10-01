@@ -33,12 +33,12 @@ User Model showing password hashed in Django Admin Panel
 - Each post has a comments sections, comments counter, community related post, content, image, and Author info including his profile picture on top.
 - Side panel show options to create Post/Community and Filter posts based on tags.
 - Side panel tags are rendered dynamically which means adding new tags will reflect on the panel and also posts will be filtered base on them easly.
-<img src="https://github.com/OmarKhaledm21/Readit-Social-App/blob/main/SS/home.png" alt="drawing" width="900" height="500"/>
-
+<img src="https://github.com/OmarKhaledm21/Readit-Social-App/blob/main/SS/home.png" alt="drawing" width="900" height="500"/><br>
+<img src="https://github.com/OmarKhaledm21/Readit-Social-App/blob/main/SS/home_view.png" alt="drawing" width="900" height="500"/><br>
+<img src="https://github.com/OmarKhaledm21/Readit-Social-App/blob/main/SS/tag_filters.png" alt="drawing" width="900" height="500"/>
 
 ##### - Creating a Post
-- This page includes all products that are sold on the website.
-- products are fetched from the backend products model through api.
+- This form take required info to create a new post, User can assign multiple Tags and should choose one community.
 <img src="https://github.com/OmarKhaledm21/Readit-Social-App/blob/main/SS/create_post.png" alt="drawing" width="900" height="500"/>
 
 ##### - Posts Comments section
