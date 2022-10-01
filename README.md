@@ -22,38 +22,33 @@ User Model showing password hashed in Django Admin Panel
 - This page includes all communities on the website, each community has a name, description and an image.
 - Usefull data is fetched from database like community total member count.
 - User is able to join any community by clicking on Join Community button.
-<img src="https://github.com/OmarKhaledm21/Readit-Social-App/blob/main/SS/communities.png" alt="drawing" width="800" height="500"/>
+<img src="https://github.com/OmarKhaledm21/Readit-Social-App/blob/main/SS/communities.png" alt="drawing" width="900" height="500"/>
 
 ##### - Users joined Communities
-- AAAAAAAAAAAAAAAAAAAAAA
-<img src="https://github.com/OmarKhaledm21/Readit-Social-App/blob/main/SS/user_communities.png" alt="drawing" width="800" height="500"/>
+- In My Communities tab the user can leave any community of his joined communities.
+<img src="https://github.com/OmarKhaledm21/Readit-Social-App/blob/main/SS/user_communities.png" alt="drawing" width="900" height="500"/>
 
-##### - Signup Page
+##### - Home Page
+- This page shows posts from all communities that the user has joined.
+- Each post has a comments sections, comments counter, community related post, content, image, and Author info including his profile picture on top.
+- Side panel show options to create Post/Community and Filter posts based on tags.
+- Side panel tags are rendered dynamically which means adding new tags will reflect on the panel and also posts will be filtered base on them easly.
+<img src="https://github.com/OmarKhaledm21/Readit-Social-App/blob/main/SS/home.png" alt="drawing" width="900" height="500"/>
+
+
+##### - Creating a Post
 - This page includes all products that are sold on the website.
 - products are fetched from the backend products model through api.
-<img src="https://github.com/OmarKhaledm21/Readit-Social-App/blob/main/SS/signup.png" alt="drawing" width="800" height="500"/>
+<img src="https://github.com/OmarKhaledm21/Readit-Social-App/blob/main/SS/create_post.png" alt="drawing" width="900" height="500"/>
 
-##### - Signup Page
+##### - Posts Comments section
 - This page includes all products that are sold on the website.
 - products are fetched from the backend products model through api.
-<img src="https://github.com/OmarKhaledm21/Readit-Social-App/blob/main/SS/signup.png" alt="drawing" width="800" height="500"/>
+<img src="https://github.com/OmarKhaledm21/Readit-Social-App/blob/main/SS/post_comments.png" alt="drawing" width="900" height="500"/>
 
-##### - Signup Page
+##### - Footer
 - This page includes all products that are sold on the website.
 - products are fetched from the backend products model through api.
-<img src="https://github.com/OmarKhaledm21/Readit-Social-App/blob/main/SS/signup.png" alt="drawing" width="800" height="500"/>
+<img src="https://github.com/OmarKhaledm21/Readit-Social-App/blob/main/SS/footer.png" alt="drawing" width="900" height="500"/>
 
-##### - Signup Page
-- This page includes all products that are sold on the website.
-- products are fetched from the backend products model through api.
-<img src="https://github.com/OmarKhaledm21/Readit-Social-App/blob/main/SS/signup.png" alt="drawing" width="800" height="500"/>
 
-##### - Signup Page
-- This page includes all products that are sold on the website.
-- products are fetched from the backend products model through api.
-<img src="https://github.com/OmarKhaledm21/Readit-Social-App/blob/main/SS/signup.png" alt="drawing" width="800" height="500"/>
-
-##### - Signup Page
-- This page includes all products that are sold on the website.
-- products are fetched from the backend products model through api.
-<img src="https://github.com/OmarKhaledm21/Readit-Social-App/blob/main/SS/signup.png" alt="drawing" width="800" height="500"/>
