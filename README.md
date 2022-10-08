@@ -8,7 +8,7 @@
 ##### - Signup Page
 - This page includes fields that are required for registering the user into the site.
 - Once a user is registered he can Add profile image and edit his data too.
-<img src="https://github.com/OmarKhaledm21/Readit-Social-App/blob/main/SS/signup.png" alt="drawing" width="900" height="500"/>
+<img src="https://github.com/OmarKhaledm21/Readit-Social-App/blob/main/SS/signup.png" alt="drawing" />
 
 ##### - User Profile and User Model
 - Once a user is signed-up or logged in he is redirected to User profile page where he can edit his data and also add an image.
